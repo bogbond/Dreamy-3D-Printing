@@ -11,6 +11,53 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+
+
+        <!--Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Dreamy 3D Printing Studio | UK Precision Prints">
+    <meta property="og:description" content="Trusted UK-based 3D printing studio. Custom resin & FDM prints, prototypes, batch production.">
+    <meta property="og:image" content="https://3dprinting.dreamycake.co.uk/images/og-preview.jpg"> <!-- Заменишь на реальный путь -->
+    <meta property="og:url" content="https://3dprinting.dreamycake.co.uk">
+    <meta property="og:site_name" content="Dreamy 3D Printing Studio">
+
+    <!--Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dreamy 3D Printing Studio">
+    <meta name="twitter:description" content="Professional 3D printing services in the UK. Miniatures, prototypes, batch production.">
+    <meta name="twitter:image" content="https://3dprinting.dreamycake.co.uk/images/og-preview.jpg">
+
+    <!--Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "DREAMY CAKE STUDIO LTD",
+    "image": "https://3dprinting.dreamycake.co.uk/images/logo.png",
+    "email": "dreamycake.info@gmail.com",
+    "telephone": "+44 7510 837225",
+    "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Brampton",
+        "addressRegion": "Huntingdonshire",
+        "postalCode": "PE284SU",
+        "addressCountry": "GB"
+    },
+    "url": "https://yourdomain.com",
+    "sameAs": [
+        "https://www.instagram.com/shop.dreamycake/",
+        "https://www.ebay.co.uk/usr/dreamycakeshop",
+        "https://www.etsy.com/shop/DreamyCakeShop"
+
+    ],
+    "description": "Dreamy Cake Studio offers professional 3D printing services in the UK, including high-resolution resin and FDM printing, prototyping, and small batch production."
+    }
+    </script>
+
 </head>
 <body>
     <header>
@@ -172,7 +219,7 @@
                 <textarea name="message" placeholder="Your Message (you can include links to Google Drive, Microsoft OneDrive, or other file-sharing services for your 3D models, or share links to platforms like Printables or Thingiverse)" required></textarea>
                 <label class="privacy-consent">
                     <input type="checkbox" name="privacy_consent" required>
-                    I agree to the <a href="#" class="social-link">Privacy Policy</a>.
+                    I agree to the <a href="privacy-policy.html" class="social-link">Privacy Policy</a>.
                 </label>
                 <button type="submit" class="btn">Send</button>
             </form>
@@ -190,13 +237,27 @@
 
     <footer>
         <div class="container">
+            <p><strong>DREAMY CAKE STUDIO LTD</strong> — Precision 3D Printing in the UK</p>
+            <p>
+            Email: <a href="mailto:dreamycake.info@gmail.com">dreamycake.info@gmail.com</a> |
+            Phone: <a href="tel:+447510837225">+44 7510 837225</a> |
+            Location: Brampton, Huntingdonshire, PE28
+            </p>
+            <p>
+            Follow us on 
+            <a href="https://www.instagram.com/shop.dreamycake/" target="_blank" rel="noopener">Instagram</a>,
+            <a href="https://www.etsy.com/shop/DreamyCakeShop" target="_blank" rel="noopener">Etsy</a>, and
+            <a href="https://www.ebay.co.uk/usr/dreamycakeshop" target="_blank" rel="noopener">eBay</a>
+            </p>
             <p>© 2025 Dreamy 3D Printing Studio. All rights reserved.</p>
-            <p>Part of the Dreamy Cake Studio LTD family: 
-                <a href="https://dreamycake.co.uk" target="_blank" rel="noopener">DreamyCake</a> | 
-                <a href="https://shop.dreamycake.co.uk" target="_blank" rel="noopener">Dreamy Cake Shop</a>
+            <p>
+            Part of the <strong>Dreamy Cake Studio LTD</strong> family:
+            <a href="https://dreamycake.co.uk" target="_blank" rel="noopener">DreamyCake</a> |
+            <a href="https://shop.dreamycake.co.uk" target="_blank" rel="noopener">Dreamy Cake Shop</a>
             </p>
         </div>
     </footer>
+
 
     <script defer src="https://cdn.jsdelivr.net/npm/baguettebox.js@1.11.1/dist/baguetteBox.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/hamburger@1.0.0/dist/hamburger.min.js"></script>
