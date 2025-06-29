@@ -262,5 +262,50 @@
     <script defer src="https://cdn.jsdelivr.net/npm/baguettebox.js@1.11.1/dist/baguetteBox.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/hamburger@1.0.0/dist/hamburger.min.js"></script>
     <script defer src="js/script.js"></script>
+
+    <!-- Cookie Consent Banner with Soft Overlay -->
+    <div id="cookie-banner" style="position: fixed; inset: 0; background-color: rgba(0, 0, 0, 0.5); display: flex; justify-content: center; align-items: flex-end; z-index: 9999;">
+    <div style="background: #fff; color: #222; width: 100%; max-width: 600px; margin: 2rem; padding: 1.5rem; border-radius: 12px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+        <h3 style="margin-top: 0; font-size: 1.2rem;">We respect your privacy</h3>
+        <p style="font-size: 1rem;">We use cookies to offer you the best browsing experience and help improve our website.</p>
+        <button id="accept-cookies" style="background: #ff6200; color: white; padding: 12px 24px; font-size: 1rem; border: none; border-radius: 6px; margin-top: 1rem; cursor: pointer;">
+        Got it
+        </button>
+    </div>
+    </div>
+
+    <script>
+    // Если уже согласие есть, сразу запускаем GTM и скрываем баннер
+    if (localStorage.getItem('analytics-consent') === 'true') {
+        loadGTM();
+        document.getElementById('cookie-banner').style.display = 'none';
+    } else {
+        // Показ баннера с задержкой
+        document.getElementById('cookie-banner').style.display = 'none';
+        setTimeout(() => {
+        document.getElementById('cookie-banner').style.display = 'flex';
+        }, 5000); // 5 секунд
+    }
+
+    // Кнопка согласия
+    document.getElementById('accept-cookies').addEventListener('click', function () {
+        localStorage.setItem('analytics-consent', 'true');
+        document.getElementById('cookie-banner').style.display = 'none';
+        loadGTM();
+    });
+
+    // Загрузка GTM
+    function loadGTM() {
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-N45Z3NSM');
+    }
+</script>
+
+
+
+
 </body>
 </html>
