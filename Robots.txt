@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://3dprinting.dreamycake.co.uk/sitemap.xml
